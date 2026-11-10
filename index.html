@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090d1b">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="StudyOS 10">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icons/icon-192.png"><link rel="apple-touch-icon" href="icons/icon-192.png"><meta name="description" content="CBSE Class 10 2026–27 complete syllabus and revision tracker.">
+<title>CBSE Class 10 | Complete Syllabus & Revision Tracker 2026–27</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+:root{--bg:#090e1b;--panel:#111a2c;--panel2:#172238;--line:#263650;--text:#edf3ff;--muted:#9aabc4;--accent:#8aa7ff;--accent2:#8be0c1;--gold:#f4c978;--red:#ff9b9b;--shadow:0 18px 60px #0005}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(1000px 500px at 80% -10%,#263b68 0%,transparent 60%),var(--bg);color:var(--text);font-family:'DM Sans','Noto Sans Devanagari',sans-serif;line-height:1.5}button,input,select{font:inherit}button{cursor:pointer}.wrap{max-width:1440px;margin:auto;padding:28px 24px 70px}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px}.brand{display:flex;align-items:center;gap:12px}.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(145deg,#a8bcff,#637fe2);display:grid;place-items:center;color:#091020;font-weight:900;font-family:Manrope}.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700}.brand h1{font:800 17px Manrope;margin:1px 0 0}.actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:11px;padding:9px 13px;font-weight:600;font-size:13px;display:inline-flex;align-items:center;gap:7px}.btn:hover{border-color:var(--accent);transform:translateY(-1px)}.btn.primary{background:var(--accent);color:#081126;border-color:transparent}.hero{display:grid;grid-template-columns:1.5fr 1fr;gap:18px;margin-bottom:18px}.hero-main,.hero-side,.stat,.subject-card,.toolbar,.chapter-card,.focus-card,.sourcebox{background:linear-gradient(145deg,#141f34,#101827);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}.hero-main{padding:30px;position:relative;overflow:hidden}.hero-main:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:#829fff12;right:-50px;top:-70px}.hero h2{font:800 clamp(28px,4vw,48px)/1.08 Manrope;margin:10px 0 12px;max-width:760px}.hero h2 span{color:var(--accent)}.hero p{color:var(--muted);max-width:740px;margin:0 0 20px}.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{font-size:12px;border:1px solid #344764;border-radius:30px;padding:6px 10px;color:#cbd7ec;background:#18243a}.hero-side{padding:23px;display:flex;flex-direction:column;justify-content:space-between}.side-title{font:700 14px Manrope}.progress-ring{display:flex;align-items:center;gap:18px;margin:14px 0}.ring{width:104px;height:104px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--accent) 0deg,#293750 0deg);position:relative;flex:none}.ring:before{content:"";position:absolute;inset:9px;background:#111a2c;border-radius:50%}.ring strong{position:relative;font:800 22px Manrope}.progress-copy strong{display:block;font:700 23px Manrope}.progress-copy span{font-size:12px;color:var(--muted)}.mini-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.stat{padding:12px;border-radius:13px;box-shadow:none}.stat b{display:block;font:800 20px Manrope}.stat span{font-size:11px;color:var(--muted)}.subject-nav{display:flex;gap:8px;overflow:auto;padding:4px 1px 14px;margin-bottom:5px}.navtab{white-space:nowrap;border:1px solid var(--line);background:#111a2c;color:#aebbd0;padding:10px 14px;border-radius:12px;font-size:13px;font-weight:700}.navtab.active{background:#dce5ff;color:#0c1630;border-color:#dce5ff}.toolbar{padding:13px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:16px;box-shadow:none}.search{flex:1;min-width:220px;position:relative}.search input{width:100%;background:#0b1323;border:1px solid var(--line);border-radius:11px;padding:11px 13px 11px 38px;color:var(--text);outline:none}.search i{position:absolute;left:12px;top:11px;color:var(--muted)}select{background:#0b1323;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:10px}.subject-head{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;margin:18px 2px}.subject-head h2{font:800 25px Manrope;margin:0}.subject-head p{margin:4px 0 0;color:var(--muted);font-size:13px}.subject-progress{min-width:170px;text-align:right;font-size:12px;color:var(--muted)}.bar{height:7px;background:#27364f;border-radius:99px;overflow:hidden;margin-top:7px}.bar>span{display:block;height:100%;width:0;background:linear-gradient(90deg,#7d9bff,#83dfc1);border-radius:99px;transition:width .35s}.unit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.chapter-card{padding:17px;border-radius:16px;box-shadow:none;transition:.2s}.chapter-card:hover{border-color:#4c6390;transform:translateY(-2px)}.chapter-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.chapter-name{display:flex;gap:11px;align-items:flex-start}.chapter-no{width:30px;height:30px;border-radius:9px;background:#243451;color:#c8d6ff;display:grid;place-items:center;font-size:12px;font-weight:800;flex:none}.chapter-card h3{font:700 15px Manrope;margin:2px 0 4px}.chapter-card p{font-size:12px;color:var(--muted);margin:0}.priority{font-size:10px;letter-spacing:.05em;text-transform:uppercase;padding:4px 7px;border-radius:6px;white-space:nowrap;font-weight:800}.p-high{color:#ffd88a;background:#5a4524}.p-core{color:#a8c2ff;background:#263b67}.p-full{color:#b4c3d6;background:#29364b}.p-map{color:#9be6cb;background:#174538}.p-formative{color:#ffb4b4;background:#542c39}.topicline{border-top:1px solid #26354c;margin-top:12px;padding-top:10px;color:#c4d0e2;font-size:12px}.topicline b{color:#eef3ff}.checks{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}.check{display:flex;align-items:center;gap:6px;color:#aebbd0;font-size:11px;cursor:pointer}.check input{accent-color:#8aa7ff;width:14px;height:14px}.chapter-card.done{border-color:#3b7968;background:linear-gradient(145deg,#132b2b,#111a2c)}.chapter-card.done .chapter-no{background:#20584a;color:#b7f3dc}.section-label{grid-column:1/-1;font:700 12px Manrope;color:var(--accent);letter-spacing:.13em;text-transform:uppercase;padding:10px 3px 0}.empty{padding:30px;text-align:center;color:var(--muted);grid-column:1/-1}.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:20px}.focus-card,.sourcebox{padding:20px;box-shadow:none}.focus-card h3,.sourcebox h3{font:700 16px Manrope;margin:0 0 10px}.focus-card li{margin:8px 0;color:#c4d0e2;font-size:13px}.sourcebox p{font-size:12px;color:var(--muted)}.source-links{display:flex;flex-wrap:wrap;gap:8px}.source-links a{color:#b8caff;text-decoration:none;border:1px solid #344764;padding:7px 9px;border-radius:9px;font-size:12px}.source-links a:hover{background:#202e48}.note{color:var(--muted);font-size:11px;margin-top:18px}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;background:#e1eaff;color:#091226;padding:10px 15px;border-radius:12px;font-size:13px;font-weight:700;pointer-events:none;z-index:20}.toast.show{opacity:1;transform:translate(-50%,0);transition:.25s}.modal{position:fixed;inset:0;background:#020611bb;display:none;place-items:center;padding:20px;z-index:30}.modal.open{display:grid}.modalbox{width:min(480px,100%);background:#131f33;border:1px solid var(--line);border-radius:18px;padding:22px}.modalbox h3{font:800 20px Manrope;margin:0 0 8px}.modalbox p{color:var(--muted);font-size:13px}.timer{font:800 46px Manrope;text-align:center;margin:15px}.timer-actions{display:flex;justify-content:center;gap:8px}.light{--bg:#eef2fa;--panel:#fff;--panel2:#f7f9fd;--line:#d7dfed;--text:#18243a;--muted:#62718a;--shadow:0 12px 35px #22314a12;background:radial-gradient(900px 500px at 80% -10%,#dce6ff 0%,transparent 60%),var(--bg)}.light .hero-main,.light .hero-side,.light .stat,.light .subject-card,.light .toolbar,.light .chapter-card,.light .focus-card,.light .sourcebox{background:#fff}.light .ring:before{background:#fff}.light .search input,.light select{background:#f7f9fd;color:#18243a}.light .navtab{background:#fff;color:#52617a}.light .navtab.active{background:#23365c;color:white}.light .topicline{color:#53627a}.light .topicline b{color:#1c2b43}.light .chip{color:#53627a;background:#f4f6fb}.light .chapter-card.done{background:#f1fbf6}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.unit-grid{grid-template-columns:1fr}.bottom-grid{grid-template-columns:1fr}}@media(max-width:560px){.wrap{padding:17px 13px 50px}.top{align-items:flex-start}.brand h1{font-size:14px}.actions .btn span{display:none}.hero-main{padding:22px}.hero-side{padding:18px}.mini-stats{grid-template-columns:repeat(3,1fr)}.subject-head{align-items:flex-start;flex-direction:column}.subject-progress{width:100%;text-align:left}.checks{gap:10px}}
+@media print{body{background:white;color:#111}.top .actions,.toolbar,.subject-nav,.checks,.bottom-grid .focus-card{display:none!important}.hero-main,.hero-side,.chapter-card{box-shadow:none;background:white;color:#111;border:1px solid #bbb;break-inside:avoid}.hero p,.chapter-card p,.topicline{color:#333}.wrap{max-width:none;padding:0}.unit-grid{grid-template-columns:1fr 1fr}.chapter-card h3{color:#111}}
+
+/* ===== StudyOS visual refresh: presentation only; syllabus data and tracker logic unchanged ===== */
+:root{
+ --bg:#080b16;--panel:#10172a;--panel2:#151f36;--line:#273451;--text:#f4f6ff;--muted:#a2aec7;
+ --accent:#a99bff;--accent2:#79e0c4;--gold:#f5cf83;--red:#ff9baf;
+ --shadow:0 24px 70px #02040b80;
+}
+body{
+ background:
+ radial-gradient(900px 520px at 12% -15%,#3b2d7555,transparent 62%),
+ radial-gradient(760px 460px at 100% 5%,#174b5a44,transparent 58%),
+ linear-gradient(180deg,#090d1b 0%,#080b16 65%,#0c1222 100%);
+ background-attachment:fixed;
+}
+.wrap{max-width:1500px;padding:25px clamp(16px,3vw,44px) 76px}
+.top{padding:7px 2px 20px;border-bottom:1px solid #ffffff12;margin-bottom:25px}
+.logo{width:46px;height:46px;border-radius:15px;background:linear-gradient(145deg,#d7d0ff,#8f7df0 65%,#6c60ca);box-shadow:0 8px 26px #9583ff44;color:#111126;font-size:15px}
+.brand h1{font-size:16px;letter-spacing:-.035em}
+.eyebrow{color:#b8adff;font-size:10px;letter-spacing:.19em}
+.actions .btn{background:#ffffff08;border-color:#ffffff18;backdrop-filter:blur(12px)}
+.btn{border-radius:12px;padding:10px 14px;transition:transform .2s,border-color .2s,background .2s}
+.btn.primary{background:linear-gradient(120deg,#c4b9ff,#8c9eff);color:#12152b;box-shadow:0 7px 22px #9c8dff30}
+.hero{grid-template-columns:minmax(0,1.55fr) minmax(320px,.85fr);gap:16px;margin-bottom:23px}
+.hero-main,.hero-side,.stat,.toolbar,.chapter-card,.focus-card,.sourcebox{
+ background:linear-gradient(145deg,#141c31ed,#0f1729f2);
+ border:1px solid #ffffff13;box-shadow:0 18px 55px #0003;
+}
+.hero-main{padding:clamp(25px,4vw,43px);min-height:260px;border-radius:25px;isolation:isolate}
+.hero-main:before{content:"";position:absolute;z-index:-1;right:5%;bottom:-135px;width:360px;height:360px;border-radius:50%;border:1px solid #b5a7ff24;box-shadow:0 0 0 32px #a99bff08,0 0 0 68px #a99bff05,0 0 90px #9e8dff17}
+.hero-main:after{width:240px;height:240px;right:10%;top:10%;background:radial-gradient(circle,#9f8dff23,transparent 70%)}
+.hero h2{font-size:clamp(34px,4.5vw,58px);letter-spacing:-.065em;line-height:1.02;margin:15px 0}
+.hero h2 span{background:linear-gradient(100deg,#c7bbff,#82dcca);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:14px;line-height:1.75;max-width:620px;color:#b0bdd4}
+.chips{margin-top:23px;max-width:700px}
+.chip{background:#ffffff08;border:1px solid #ffffff15;color:#d9def0;padding:7px 11px;font-size:11px}
+.hero-side{border-radius:25px;padding:25px;justify-content:center;gap:22px}
+.side-title{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#aab6d1}
+.progress-ring{margin:15px 0 8px;gap:20px}
+.ring{width:118px;height:118px;background:conic-gradient(#aa9cff 0deg,#29344e 0deg);filter:drop-shadow(0 0 18px #a99bff25)}
+.ring:before{inset:9px;background:#11192b}
+.ring strong{font-size:26px;letter-spacing:-.05em}
+.progress-copy strong{font-size:28px;letter-spacing:-.06em}
+.progress-copy span{font-size:12px}
+.mini-stats{gap:9px}
+.stat{border-radius:15px;padding:14px 13px;background:#ffffff06}
+.stat b{font-size:23px;letter-spacing:-.05em}
+.stat span{font-size:10px;text-transform:uppercase;letter-spacing:.08em}
+.subject-nav{position:sticky;top:0;z-index:10;padding:12px 0 15px;margin:0 0 10px;background:linear-gradient(180deg,#090d1bf5 72%,#090d1b00);backdrop-filter:blur(14px)}
+.navtab{border-radius:12px;padding:10px 15px;background:#11192b;border-color:#ffffff14;color:#b9c4db;transition:.2s}
+.navtab:hover{border-color:#9c8eff;color:#fff;transform:translateY(-2px)}
+.navtab.active{background:linear-gradient(120deg,#c7bdff,#91a7ff);color:#10152b;border-color:transparent;box-shadow:0 7px 24px #9b8bff35}
+.toolbar{border-radius:17px;padding:12px;background:#101729d9;gap:9px;box-shadow:none}
+.search input,select{background:#090f1d;border-color:#ffffff17;border-radius:12px;min-height:42px}
+.search input:focus,select:focus{outline:2px solid #a99bff55;border-color:#a99bff}
+.subject-head{margin:27px 2px 17px;align-items:center}
+.subject-head h2{font-size:clamp(24px,3vw,32px);letter-spacing:-.05em}
+.subject-head p{max-width:800px;line-height:1.65}
+.subject-progress{min-width:200px;font-weight:700;color:#c5cce0}
+.bar{height:8px;background:#26324a}
+.bar>span{background:linear-gradient(90deg,#a99bff,#79e0c4)}
+.unit-grid{gap:13px}
+.section-label{padding:19px 3px 0;color:#c0b5ff;font-size:10px;letter-spacing:.16em}
+.chapter-card{border-radius:17px;padding:18px 18px 15px;box-shadow:none;position:relative;overflow:hidden;transition:transform .22s,border-color .22s,background .22s}
+.chapter-card:before{content:"";position:absolute;left:0;top:16px;bottom:16px;width:2px;border-radius:3px;background:linear-gradient(180deg,#a99bff,#79e0c4);opacity:0;transition:opacity .2s}
+.chapter-card:hover{transform:translateY(-3px);border-color:#8275d855;background:linear-gradient(145deg,#19233b,#111a2c)}
+.chapter-card:hover:before{opacity:1}
+.chapter-card.done{border-color:#4e9c86;background:linear-gradient(145deg,#142d2b,#101a2a)}
+.chapter-card.done:before{opacity:1;background:#79e0c4}
+.chapter-no{width:32px;height:32px;border-radius:10px;background:#252c4b;color:#d8d0ff;font-size:11px}
+.chapter-card h3{font-size:14px;letter-spacing:-.015em;line-height:1.4}
+.chapter-card p{font-size:12px;line-height:1.65;color:#aebbd2}
+.priority{border-radius:20px;padding:5px 9px;font-size:9px;letter-spacing:.06em}
+.p-high{background:#4b3b26;color:#ffdb9c}
+.p-core{background:#27345a;color:#c2ccff}
+.p-full{background:#29364b;color:#c4d0e2}
+.p-map{background:#16463c;color:#9bead0}
+.p-formative{background:#542b3c;color:#ffb5c2}
+.topicline{border-top:1px solid #ffffff10;margin-top:13px;padding-top:11px;font-size:11px;line-height:1.7;color:#b9c5dc}
+.topicline b{color:#e9e5ff}
+.checks{gap:8px;margin-top:13px}
+.check{border:1px solid #ffffff12;background:#ffffff05;border-radius:9px;padding:6px 9px;color:#b9c5dc;transition:.2s}
+.check:hover{border-color:#9d90ff66;color:#fff}
+.check input{accent-color:#a99bff;width:13px;height:13px}
+.chapter-card.done .check:has(input:checked){background:#183d35;border-color:#387d6b}
+.bottom-grid{gap:14px;margin-top:22px}
+.focus-card,.sourcebox{border-radius:19px;padding:22px}
+.focus-card h3,.sourcebox h3{font-size:15px;letter-spacing:-.02em}
+.focus-card li{font-size:12px;line-height:1.7;color:#b9c5dc}
+.sourcebox p{line-height:1.7}
+.source-links a{border-radius:10px;background:#ffffff05;border-color:#ffffff17}
+.source-links a:hover{background:#252449;border-color:#a99bff}
+.note{line-height:1.7;color:#8795b0}
+.toast{border-radius:13px;box-shadow:0 10px 35px #0005}
+.modalbox{border-radius:22px;box-shadow:0 25px 90px #0009}
+.light{--bg:#f2f3fb;--panel:#fff;--panel2:#f8f8ff;--line:#dce0ee;--text:#20233a;--muted:#68708a;--accent:#7665db;--accent2:#319b85;--shadow:0 18px 50px #37305d12;background:radial-gradient(900px 500px at 10% -15%,#dcd5ff 0%,transparent 60%),linear-gradient(180deg,#f6f5ff,#eef2fa)}
+.light .top{border-bottom-color:#25204415}
+.light .hero-main,.light .hero-side,.light .stat,.light .toolbar,.light .chapter-card,.light .focus-card,.light .sourcebox{background:#fff;border-color:#e2e4f0}
+.light .hero-main:before{border-color:#7c6bdb22;box-shadow:0 0 0 32px #7c6bdb08,0 0 0 68px #7c6bdb05}
+.light .hero p,.light .chapter-card p,.light .topicline,.light .focus-card li{color:#606a84}
+.light .hero h2 span{background:linear-gradient(100deg,#725fd3,#268f83);-webkit-background-clip:text;background-clip:text;color:transparent}
+.light .ring:before{background:#fff}
+.light .navtab{background:#fff;color:#56617c;border-color:#e2e4f0}
+.light .navtab.active{background:linear-gradient(120deg,#7665db,#7996ed);color:#fff}
+.light .subject-nav{background:linear-gradient(180deg,#f2f1fbf5 72%,#f2f1fb00)}
+.light .toolbar{background:#ffffffdc}
+.light .search input,.light select{background:#f7f8fd;color:#20233a;border-color:#e1e4ef}
+.light .chip{background:#f7f6ff;border-color:#e4e0fa;color:#505777}
+.light .chapter-card:hover{background:#fbfaff;border-color:#b8afe9}
+.light .chapter-card.done{background:#f1fbf7;border-color:#b8e1d2}
+.light .topicline{border-top-color:#ececf4}
+.light .check{background:#f8f8fd;border-color:#e7e8f1;color:#5d6680}
+.light .source-links a{background:#f8f8fd;border-color:#e3e5ef;color:#5549a2}
+.light .bar{background:#e5e7f1}
+.light .stat{background:#fafaff}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero-side{min-height:0}.unit-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.wrap{padding:14px 12px 48px}.top{padding-bottom:14px}.hero-main{min-height:0;padding:24px 20px}.hero-main:before{right:-100px}.hero h2{font-size:38px}.hero-side{padding:19px}.ring{width:100px;height:100px}.progress-copy strong{font-size:24px}.subject-nav{top:0}.toolbar{padding:10px}.toolbar .btn{padding:9px 10px}.subject-head{margin-top:22px}.chapter-card{padding:15px}.chapter-top{gap:7px}.priority{font-size:8px}.checks{gap:6px}.check{font-size:10px;padding:6px 7px}}
+
+
+/* ===== StudyOS 3.0 — editorial product UI, restrained and intentional ===== */
+:root{
+ --bg:#101310;--panel:#171c18;--panel2:#1c231d;--line:#303a31;--text:#f0f1e9;--muted:#a4ad9f;
+ --accent:#c5e478;--accent2:#9ac5a2;--gold:#e9c98a;--red:#e99b91;--shadow:0 12px 32px #00000024;
+}
+*{scrollbar-color:#465344 #171c18;scrollbar-width:thin}
+body{
+ background:#101310;
+ background-image:radial-gradient(ellipse at 82% 0%,#29382a55,transparent 38%);
+ background-attachment:fixed;
+ font-family:"DM Sans","Noto Sans Devanagari",sans-serif;
+ letter-spacing:-.012em;
+}
+.wrap{max-width:1360px;padding:24px clamp(18px,3.2vw,48px) 72px}
+.top{border-bottom:1px solid #ffffff13;padding:3px 0 18px;margin-bottom:30px}
+.logo{border-radius:11px;background:#c5e478;color:#182016;box-shadow:none;font:800 14px Manrope}
+.eyebrow{color:#c5e478;letter-spacing:.14em;font-size:10px}
+.brand h1{font-size:15px;letter-spacing:-.04em}
+.btn{border-radius:8px;border-color:#3b453b;background:#1b211b;box-shadow:none;padding:9px 12px;font-size:12px}
+.btn:hover{transform:translateY(-1px);border-color:#c5e478;background:#222b21}
+.btn.primary{background:#c5e478;color:#172014;box-shadow:none}
+.hero{grid-template-columns:minmax(0,1.55fr) minmax(300px,.72fr);gap:14px;margin-bottom:25px}
+.hero-main,.hero-side,.stat,.toolbar,.chapter-card,.focus-card,.sourcebox{
+ background:#171c18;border:1px solid #303a31;box-shadow:none;
+}
+.hero-main{border-radius:13px;padding:clamp(24px,3.6vw,42px);min-height:252px}
+.hero-main:before{display:none}
+.hero-main:after{right:0;top:0;width:35%;height:100%;border-radius:0;background:linear-gradient(90deg,transparent,#c5e47808);pointer-events:none}
+.hero h2{font:700 clamp(34px,4.2vw,55px)/1.04 Manrope;letter-spacing:-.075em;margin:13px 0 14px}
+.hero h2 span{color:#c5e478;background:none;-webkit-text-fill-color:initial}
+.hero p{font-size:13px;line-height:1.8;color:#b3bcb0;max-width:640px}
+.chips{gap:6px;margin-top:20px}
+.chip{border:1px solid #394439;background:#1d241e;color:#c8d1c4;border-radius:6px;font-size:10px;padding:6px 8px}
+.hero-side{border-radius:13px;padding:22px;justify-content:center;gap:20px}
+.side-title{font-size:10px;text-transform:uppercase;letter-spacing:.13em;color:#aab4a6}
+.progress-ring{margin:14px 0 6px;gap:16px}
+.ring{width:102px;height:102px;filter:none;background:conic-gradient(#c5e478 0deg,#303a31 0deg)}
+.ring:before{inset:7px;background:#171c18}
+.ring strong{font:700 23px Manrope;letter-spacing:-.06em}
+.progress-copy strong{font:700 25px Manrope;letter-spacing:-.06em}
+.progress-copy span{font-size:11px;color:#a4ad9f}
+.mini-stats{gap:7px}
+.stat{border-radius:9px;padding:11px 12px;background:#1c231d}
+.stat b{font:700 20px Manrope;color:#e8eee1}
+.stat span{font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:#a4ad9f}
+.subject-nav{position:sticky;top:0;z-index:10;padding:10px 0 13px;margin:0 0 8px;background:linear-gradient(180deg,#101310 75%,#10131000);backdrop-filter:blur(8px)}
+.navtab{border:1px solid #354034;background:#171c18;color:#bac4b6;border-radius:7px;padding:9px 13px;font-size:12px}
+.navtab:hover{border-color:#9fbd64;color:#eef4e8;transform:none}
+.navtab.active{background:#c5e478;border-color:#c5e478;color:#172014;box-shadow:none}
+.toolbar{border-radius:10px;padding:10px;background:#171c18;gap:8px}
+.search input,select{background:#101510;border:1px solid #354034;border-radius:7px;color:#e8eee1;min-height:39px;font-size:12px}
+.search input:focus,select:focus{outline:1px solid #c5e478;border-color:#c5e478}
+.subject-head{margin:27px 2px 17px;align-items:center}
+.subject-head h2{font:700 27px Manrope;letter-spacing:-.06em}
+.subject-head p{font-size:12px;line-height:1.7;color:#a4ad9f}
+.subject-progress{font-size:11px;color:#c4d0bb;min-width:190px}
+.bar{height:5px;background:#303a31;border-radius:2px}
+.bar>span{background:#c5e478;border-radius:2px}
+.unit-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.section-label{padding:17px 3px 2px;color:#c5e478;font-size:9px;letter-spacing:.16em}
+.chapter-card{border-radius:10px;padding:15px 15px 13px;transition:border-color .18s,background .18s}
+.chapter-card:before{display:none}
+.chapter-card:hover{transform:none;border-color:#7b9160;background:#1b231b}
+.chapter-card.done{border-color:#668b62;background:#17231a}
+.chapter-no{width:27px;height:27px;border-radius:6px;background:#293429;color:#d3e6b5;font-size:10px}
+.chapter-card h3{font:600 13px/1.4 Manrope;letter-spacing:-.02em;color:#f0f1e9;margin:1px 0 4px}
+.chapter-card p{font-size:11px;line-height:1.65;color:#aab5a6}
+.priority{border-radius:4px;padding:4px 6px;font-size:8px;letter-spacing:.04em}
+.p-high{color:#e9d29c;background:#443b27}
+.p-core{color:#c8d8b0;background:#303e2d}
+.p-full{color:#c2cabe;background:#303830}
+.p-map{color:#a7d5b2;background:#23412d}
+.p-formative{color:#e5b0a5;background:#482d2a}
+.topicline{border-top:1px solid #2d382e;margin-top:10px;padding-top:9px;font-size:10px;line-height:1.7;color:#aeb9a9}
+.topicline b{color:#dfe9d4}
+.checks{gap:6px;margin-top:10px}
+.check{display:flex;align-items:center;gap:5px;border:1px solid #354034;background:#1b211b;border-radius:5px;padding:5px 7px;font-size:10px;color:#b7c1b2}
+.check:hover{border-color:#879b67;color:#edf4e5}
+.check input{accent-color:#c5e478;width:12px;height:12px}
+.chapter-card.done .check:has(input:checked){background:#263725;border-color:#617c4f}
+.bottom-grid{gap:10px;margin-top:18px}
+.focus-card,.sourcebox{border-radius:10px;padding:18px}
+.focus-card h3,.sourcebox h3{font:600 13px Manrope;letter-spacing:-.02em}
+.focus-card li{font-size:11px;line-height:1.75;color:#b5c0b0}
+.sourcebox p,.note{font-size:11px;line-height:1.7;color:#98a394}
+.source-links{gap:6px}
+.source-links a{border:1px solid #3a4539;border-radius:5px;background:#1b211b;color:#c5e478;padding:6px 8px;font-size:10px}
+.source-links a:hover{background:#263126;border-color:#9dbb65}
+.toast{border-radius:7px;background:#c5e478;color:#172014;box-shadow:0 8px 24px #0005}
+.modalbox{border-radius:12px;background:#171c18;border-color:#394439}
+.light{
+ --bg:#f3f3ed;--panel:#fff;--panel2:#f8f8f2;--line:#dedfd4;--text:#20251e;--muted:#697365;--accent:#638b38;--accent2:#4f8e6b;--shadow:0 8px 24px #26351a0a;
+ background:#f3f3ed;
+}
+.light body{background:#f3f3ed}
+.light .top{border-bottom-color:#dfe2d7}
+.light .logo,.light .btn.primary,.light .navtab.active{background:#668c3b;color:white}
+.light .hero-main,.light .hero-side,.light .stat,.light .toolbar,.light .chapter-card,.light .focus-card,.light .sourcebox{background:#fff;border-color:#e0e2d8}
+.light .hero-main:after{background:linear-gradient(90deg,transparent,#668c3808)}
+.light .hero h2 span{color:#668c3b;background:none;-webkit-text-fill-color:initial}
+.light .hero p,.light .chapter-card p,.light .topicline,.light .focus-card li{color:#66705f}
+.light .ring:before{background:#fff}
+.light .stat{background:#f8f9f4}
+.light .stat b,.light .chapter-card h3{color:#20251e}
+.light .navtab{background:#fff;color:#53604e;border-color:#dfe2d7}
+.light .subject-nav{background:linear-gradient(180deg,#f3f3ed 75%,#f3f3ed00)}
+.light .search input,.light select{background:#fafbf7;color:#20251e;border-color:#dfe2d7}
+.light .chip{background:#f5f7ef;border-color:#e1e7d7;color:#526148}
+.light .chapter-card:hover{background:#fbfcf8;border-color:#aabf8e}
+.light .chapter-card.done{background:#f4f9f0;border-color:#b9d0a8}
+.light .topicline{border-top-color:#e9ece4}
+.light .check{background:#f8f9f5;border-color:#e1e5dc;color:#5c6854}
+.light .source-links a{background:#f7f9f2;border-color:#dce4d2;color:#557a2f}
+.light .bar{background:#e5e8df}
+.light .p-high{background:#f6edda;color:#7b5a1e}
+.light .p-core{background:#edf2e5;color:#526b36}
+.light .p-full{background:#eef0eb;color:#5f6859}
+.light .p-map{background:#e5f2e8;color:#39724a}
+.light .p-formative{background:#f7e9e6;color:#915247}
+@media(max-width:900px){.unit-grid{grid-template-columns:1fr}.hero{grid-template-columns:1fr}}
+@media(max-width:560px){.wrap{padding:14px 12px 45px}.hero-main{padding:23px 19px}.hero h2{font-size:37px}.hero-side{padding:18px}.subject-head h2{font-size:24px}.chapter-card{padding:13px}.priority{font-size:7px}.checks{gap:5px}.check{font-size:9px;padding:5px 6px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+</style></head>
+<body>
+<div class="wrap">
+<header class="top"><div class="brand"><div class="logo">10</div><div><div class="eyebrow">Academic year 2026–27</div><h1>Class X · Syllabus & Revision OS</h1></div></div><div class="actions"><button class="btn" id="installBtn" hidden><i data-lucide="download"></i><span>Install app</span></button><button class="btn" id="themeBtn"><i data-lucide="sun-moon"></i><span>Theme</span></button><button class="btn" id="timerBtn"><i data-lucide="timer"></i><span>Focus timer</span></button><button class="btn" id="printBtn"><i data-lucide="printer"></i><span>Print</span></button></div></header>
+<section class="hero"><div class="hero-main"><div class="eyebrow">Your complete board preparation dashboard</div><h2>Study with a plan.<br><span>Revise with proof.</span></h2><p>Track every chapter across your five main subjects and Sanskrit as an additional subject. Mark learning, PYQ practice and revision separately so you know exactly what is left.</p><div class="chips"><span class="chip">Mathematics · Basic</span><span class="chip">Hindi · Course A</span><span class="chip">English · Language & Literature</span><span class="chip">Sanskrit · Additional</span><span class="chip">CBSE 2026–27</span></div></div>
+<div class="hero-side"><div><div class="side-title">Overall completion</div><div class="progress-ring"><div class="ring" id="ring"><strong id="overallPct">0%</strong></div><div class="progress-copy"><strong id="completedCount">0 / 0</strong><span>chapters fully revised</span></div></div></div><div class="mini-stats"><div class="stat"><b id="learnedCount">0</b><span>Learned</span></div><div class="stat"><b id="pyqCount">0</b><span>PYQ done</span></div><div class="stat"><b id="revCount">0</b><span>Revised</span></div></div></div></section>
+<nav class="subject-nav" id="subjectNav"></nav>
+<div class="toolbar"><div class="search"><i data-lucide="search"></i><input id="search" placeholder="Search chapter or topic…"></div><select id="filter"><option value="all">All chapters</option><option value="pending">Needs work</option><option value="high">High-priority practice</option><option value="done">Fully revised</option></select><button class="btn" id="expandBtn"><i data-lucide="list-collapse"></i><span>Expand topics</span></button><button class="btn" id="exportBtn"><i data-lucide="download"></i><span>Export progress</span></button><button class="btn" id="importBtn"><i data-lucide="upload"></i><span>Import</span></button><input type="file" id="importFile" accept="application/json" hidden></div>
+<div class="subject-head"><div><div class="eyebrow" id="subjectEyebrow">Main subject · 80 marks theory</div><h2 id="subjectTitle">Mathematics — Basic</h2><p id="subjectDesc">Chapter-by-chapter tracker with a focus on the examinable syllabus.</p></div><div class="subject-progress"><span id="subjectPct">0% complete</span><div class="bar"><span id="subjectBar"></span></div></div></div>
+<div class="unit-grid" id="chapterGrid"></div>
+<div class="bottom-grid"><section class="focus-card"><h3><i data-lucide="target"></i> How to use the priority tags</h3><ul><li><b>High practice:</b> concept-rich areas that are useful to practise with mixed PYQs and competency questions.</li><li><b>Core:</b> important examinable content; prepare the full chapter, not just the starred topics.</li><li><b>Full chapter:</b> complete coverage is required even if no special priority tag is shown.</li><li><b>Map / formative:</b> special assessment treatment is noted explicitly from the CBSE curriculum.</li></ul><p class="note">Priority is a revision guide, not a prediction or a guarantee of questions.</p></section><section class="sourcebox"><h3><i data-lucide="book-open-check"></i> Official syllabus & paper sources</h3><p>Chapter inclusion and special exclusions are based on CBSE's 2026–27 curriculum. PYQ practice guidance is qualitative; this page does not claim a statistical frequency ranking of every past paper.</p><div class="source-links"><a href="https://cbseacademic.nic.in/curriculum_2027.html" target="_blank" rel="noopener">2026–27 curriculum</a><a href="https://www.cbse.gov.in/cbsenew/question-paper.html" target="_blank" rel="noopener">Previous papers</a><a href="https://www.cbse.gov.in/cbsenew/marking-scheme.html" target="_blank" rel="noopener">Marking schemes</a><a href="https://cbseacademic.nic.in/SQP_CLASSX_2026-27.html" target="_blank" rel="noopener">Sample papers 2026–27</a></div></section></div>
+<p class="note">Progress is saved in this browser on this device. Use Export Progress before clearing browser data or switching devices. Verify school-specific subject registration and the latest CBSE circulars before the examination.</p>
+</div>
+<div class="toast" id="toast">Saved</div>
+<div class="modal" id="timerModal"><div class="modalbox"><h3>Focus session</h3><p>One distraction-free study block. Default: 25 minutes.</p><div class="timer" id="timerDisplay">25:00</div><div class="timer-actions"><button class="btn primary" id="timerStart">Start</button><button class="btn" id="timerReset">Reset</button><button class="btn" id="timerClose">Close</button></div></div></div>
+<script>
+const subjects=[
+{id:'math',name:'Mathematics — Basic',short:'Math Basic',type:'Main subject',marks:'80 theory + 20 internal',desc:'Basic Mathematics (241). The course content is common with Standard; the Basic paper has a different difficulty level.',units:[
+{section:'Number Systems · 6 marks',chapters:[
+['Real Numbers','Fundamental Theorem of Arithmetic; prime factorisation; irrationality proofs for √2, √3 and √5.','high'],
+]},
+{section:'Algebra · 20 marks',chapters:[
+['Polynomials','Zeros of a polynomial; relation between zeros and coefficients of a quadratic polynomial.','high'],
+['Pair of Linear Equations in Two Variables','Graphical solution; consistency; algebraic conditions; substitution and elimination; simple word problems.','high'],
+['Quadratic Equations','Standard form; factorisation; quadratic formula; discriminant and nature of roots; word problems.','high'],
+['Arithmetic Progressions','nth term; sum of first n terms; application problems.','high']]},
+{section:'Coordinate Geometry · 6 marks',chapters:[['Coordinate Geometry','Distance formula; section formula (internal division).','core']]},
+{section:'Geometry · 15 marks',chapters:[['Triangles','Similarity criteria; Basic Proportionality Theorem and converse; areas of similar triangles; Pythagoras theorem and converse.','high'],['Circles','Tangent to a circle; number of tangents from an external point; theorem-based reasoning.','core']]},
+{section:'Trigonometry · 12 marks',chapters:[['Introduction to Trigonometry','Trigonometric ratios; standard angles; relationships between ratios; identities.','high'],['Some Applications of Trigonometry','Heights and distances; angle of elevation and depression; simple diagrams.','high']]},
+{section:'Mensuration · 10 marks',chapters:[['Areas Related to Circles','Circumference and area; sectors and segments; combinations of plane figures.','core'],['Surface Areas and Volumes','Surface area and volume of combinations of solids; conversion of solids.','high']]},
+{section:'Statistics & Probability · 11 marks',chapters:[['Statistics','Mean, median and mode of grouped data; cumulative frequency and ogive as prescribed.','high'],['Probability','Classical probability; simple events and complements.','core']]}
+]},
+{id:'science',name:'Science',short:'Science',type:'Main subject',marks:'80 theory + 20 internal',desc:'Physics, Chemistry and Biology. Unit weightage: Chemical Substances 25; World of Living 25; Natural Phenomena 12; Effects of Current 13; Natural Resources 5.',units:[
+{section:'Chemistry · Chemical Substances (25 marks unit)',chapters:[
+['Chemical Reactions and Equations','Balancing; combination, decomposition, displacement and double displacement; precipitation; oxidation and reduction; exothermic/endothermic reactions.','high'],
+['Acids, Bases and Salts','Indicators; chemical properties; pH and everyday importance; salts and uses of baking soda, washing soda, bleaching powder and Plaster of Paris.','high'],
+['Metals and Non-metals','Physical and chemical properties; reactivity series; ionic compounds; extraction basics; corrosion and prevention.','high'],
+['Carbon and its Compounds','Covalent bonding; homologous series; nomenclature; functional groups; combustion, oxidation, addition and substitution; ethanol, ethanoic acid, soaps and detergents.','high']]},
+{section:'Biology · World of Living (25 marks unit)',chapters:[
+['Life Processes','Nutrition, respiration, transportation and excretion in plants and animals.','high'],
+['Control and Coordination','Nervous system; reflex action; plant movements and hormones; animal hormones and coordination.','high'],
+['How do Organisms Reproduce?','Asexual and sexual reproduction; reproductive health and human reproductive systems as prescribed.','core'],
+['Heredity','Inheritance; Mendel’s contribution; sex determination.','high']]},
+{section:'Physics · Natural Phenomena (12 marks unit)',chapters:[
+['Light – Reflection and Refraction','Spherical mirrors and lenses; ray diagrams; mirror/lens formulae; magnification; refraction and refractive index.','high'],
+['The Human Eye and the Colourful World','Accommodation; defects of vision and correction; dispersion; atmospheric refraction and scattering.','core']]},
+{section:'Physics · Effects of Current (13 marks unit)',chapters:[
+['Electricity','Current, potential difference, Ohm’s law; resistance and resistivity; series/parallel combinations; heating effect; electric power.','high'],
+['Magnetic Effects of Electric Current','Magnetic field and field lines; field around a conductor/coil/solenoid; force on a current-carrying conductor; domestic circuits.','high']]},
+{section:'Environment · Natural Resources (5 marks unit)',chapters:[
+['Our Environment','Ecosystem; food chains and webs; trophic levels; biological magnification; ozone depletion and waste management.','core']]}
+]},
+{id:'sst',name:'Social Science',short:'Social Science',type:'Main subject',marks:'80 theory + 20 internal',desc:'History, Geography, Political Science and Economics · 20 marks each, inclusive of map work where prescribed.',units:[
+{section:'History · 20 marks including 2 map marks',chapters:[
+['The Rise of Nationalism in Europe','French Revolution; liberalism and conservatism; 1830/1848 revolutions; unification of Germany and Italy; Britain; Balkans.','high'],
+['Nationalism in India','First World War; Khilafat and Non-Cooperation; Civil Disobedience; Salt March; social groups; collective belonging.','high'],
+['The Making of a Global World','Board portion only: subtopics 1–1.3 — The Pre-modern World through Conquest, disease and trade.','high'],
+['Print Culture and the Modern World','Print revolution; print in Europe and India; religious reform and public debates; women and print; censorship.','core']]},
+{section:'Geography · 20 marks including 3 map marks',chapters:[
+['Resources and Development','Resource planning; sustainable development; land use; soil types; soil erosion and conservation.','high'],
+['Forest and Wildlife Resources','Biodiversity; depletion; conservation; community and conservation movements.','core'],
+['Water Resources','Water scarcity; multipurpose projects; dams; rainwater harvesting.','high'],
+['Agriculture','Cropping seasons; major crops and conditions; technological/institutional reforms; food security.','high'],
+['Minerals and Energy Resources','Types and distribution; iron ore, coal, petroleum; conventional and non-conventional energy; conservation.','high'],
+['Manufacturing Industries','Importance; location factors; agro-based and mineral-based industries; industrial pollution and control.','high'],
+['Lifelines of National Economy','BOARD EXAM: map pointing only. Do not prepare this chapter as theory for the board paper.','map']]},
+{section:'Political Science · 20 marks',chapters:[
+['Power-sharing','Belgium and Sri Lanka; majoritarianism; forms and importance of power-sharing.','high'],
+['Federalism','Features; levels of government; language policy; Centre–State relations; decentralisation and local government.','high'],
+['Gender, Religion and Caste','Gender division; women’s representation; religion and politics; communalism; secularism; caste and politics.','core'],
+['Political Parties','Functions; need; national and state parties; challenges and reforms.','high'],
+['Outcomes of Democracy','Accountable, responsive and legitimate government; economic outcomes; inequality; social diversity; dignity and freedom.','core']]},
+{section:'Economics · 20 marks',chapters:[
+['Development','Different goals; income and other criteria; per capita income; public facilities; sustainability.','high'],
+['Sectors of the Indian Economy','Primary/secondary/tertiary; GDP; employment; underemployment; organised/unorganised; public/private; MGNREGA.','high'],
+['Money and Credit','Functions of money; banks and deposits; formal/informal credit; collateral; SHGs; terms of credit.','high'],
+['Globalisation and the Indian Economy','Board portion only: What is Globalisation? and Factors that have enabled Globalisation. Other listed subtopics are project/multiple-assessment content.','high'],
+['Consumer Rights','PROJECT WORK; not board theory. Track project completion separately if your school assigns it.','formative']]}
+]},
+{id:'english',name:'English — Language & Literature',short:'English',type:'Main subject',marks:'80 theory + 20 internal',desc:'English Language and Literature (184). Reading 20; Writing Skills & Grammar 20; Literature 40.',units:[
+{section:'Reading · 20 marks',chapters:[['Unseen Reading Comprehension','Discursive passage and case-based factual passage; inference, analysis, vocabulary and interpretation.','high']]},
+{section:'Grammar & Writing · 20 marks',chapters:[
+['Grammar','Determiners; tenses; modals; subject–verb concord; reported speech (commands/requests, statements and questions).','high'],
+['Formal Letter','Situation-based formal letter, approximately 100–120 words.','core'],
+['Analytical Paragraph','Interpret a map, chart, graph or cues; approximately 100–120 words.','high']]},
+{section:'First Flight · Prose',chapters:[
+['A Letter to God','Plot, character, irony, faith and human response.','core'],['Nelson Mandela – Long Walk to Freedom','Apartheid, freedom, courage, equality and leadership.','high'],['Stories About Flying','His First Flight and Black Aeroplane; fear, courage, mystery and decision-making.','high'],['From the Diary of Anne Frank','Diary form, adolescent voice, self-expression and relationships.','core'],['Glimpses of India','A Baker from Goa; Coorg; Tea from Assam — culture, place and livelihood.','core'],['Mijbil the Otter','Human–animal bond; narrative details and character.','core'],['Madam Rides the Bus','Valli’s curiosity, independence and maturity.','high'],['The Sermon at Benares','Buddha’s teaching on grief, death and acceptance.','high'],['The Proposal','Play; humour, conflict, characters and satire.','core']]},
+{section:'First Flight · Poems',chapters:[
+['Dust of Snow','Nature and a small moment changing one’s mood.','core'],['Fire and Ice','Desire, hatred and destruction; symbolism.','core'],['A Tiger in the Zoo','Freedom versus captivity; contrast and imagery.','high'],['How to Tell Wild Animals','Humour, rhyme and poetic devices.','core'],['The Ball Poem','Loss, responsibility and growing up.','high'],['Amanda!','Freedom, restrictions and child psychology.','core'],['The Trees','Symbolism; nature and freedom.','core'],['Fog','Metaphor and personification.','core'],['The Tale of Custard the Dragon','Courage, appearance versus reality and ballad form.','core'],['For Anne Gregory','Beauty, identity and inner versus outer self.','core']]},
+{section:'Footprints Without Feet',chapters:[
+['A Triumph of Surgery','Humour, overfeeding and care of animals.','core'],['The Thief’s Story','Trust, kindness and transformation.','high'],['The Midnight Visitor','Presence of mind and suspense.','high'],['A Question of Trust','Irony, deception and character.','core'],['Footprints Without Feet','Science, misuse of power and consequences.','core'],['The Making of a Scientist','Curiosity, perseverance and scientific temperament.','core'],['The Necklace','Pride, appearance and irony.','high'],['Bholi','Education, self-respect and empowerment.','high'],['The Book That Saved the Earth','Satire, misunderstanding and dramatic irony.','core']]},
+{section:'Workbook',chapters:[['Words and Expressions – II','Units 1–4 and 7–11.','full']]}
+]},
+{id:'hindi',name:'Hindi — Course A',short:'Hindi A',type:'Main subject',marks:'80 theory + 20 internal',desc:'Hindi Course A (002). Follow the 2026–27 board syllabus, not an older deleted-chapter list. Literature titles below are textbook study prompts; verify prescribed text portions with the official Hindi PDF.',units:[
+{section:'अपठित बोध · 14 marks',chapters:[['अपठित गद्यांश एवं काव्यांश','बोध, चिंतन, विश्लेषण, सराहना; वस्तुनिष्ठ और लघु उत्तरीय प्रश्न।','high']]},
+{section:'व्यावहारिक व्याकरण · 16 marks',chapters:[
+['रचना के आधार पर वाक्य भेद','वाक्य के प्रकार और रूपांतरण का अभ्यास।','high'],['वाच्य','कर्तृवाच्य, कर्मवाच्य और भाववाच्य।','high'],['पद परिचय','संज्ञा, सर्वनाम, विशेषण, क्रिया आदि का प्रसंगानुसार परिचय।','high'],['अलंकार','उपमा, रूपक, उत्प्रेक्षा, अतिशयोक्ति और मानवीकरण।','high']]},
+{section:'क्षितिज भाग 2 · गद्य',chapters:[
+['नेताजी का चश्मा','पात्र, प्रतीक और देशभक्ति की भावना।','core'],['बालगोबिन भगत','चरित्र-चित्रण, लोक-संस्कृति और जीवन-दृष्टि।','core'],['लखनवी अंदाज़','व्यंग्य, व्यवहार और सामाजिक दिखावा।','core'],['एक कहानी यह भी','आत्मकथात्मक स्वर, संघर्ष और व्यक्तित्व।','core'],['नौबतखाने में इबादत','संगीत, परंपरा और कलाकार का जीवन।','core'],['संस्कृति','सभ्यता-संस्कृति और मानवीय मूल्य।','core']]},
+{section:'क्षितिज भाग 2 · काव्य',chapters:[
+['सूरदास के पद','भाव, वात्सल्य और काव्य-सौंदर्य।','core'],['राम-लक्ष्मण-परशुराम संवाद','संवाद, वीर रस और भाषा-शैली।','core'],['आत्मकथ्य','कवि की मनःस्थिति और काव्य-भाव।','core'],['उत्साह एवं अट नहीं रही है','प्रकृति, ऊर्जा, बिंब और भाव।','core'],['यह दंतुरित मुस्कान एवं फसल','बाल-सौंदर्य, प्रकृति और श्रम।','core'],['संगतकार','सहयोग, कला और अनदेखे योगदान का महत्व।','core']]},
+{section:'कृतिका भाग 2',chapters:[
+['माता का आँचल','ग्रामीण जीवन, बालमन और पारिवारिक स्नेह।','core'],['साना-साना हाथ जोड़ि','यात्रा-वृत्तांत, प्रकृति और अनुभव।','core'],['मैं क्यों लिखता हूँ?','लेखन की प्रेरणा और सृजन-प्रक्रिया।','core']]},
+{section:'रचनात्मक लेखन · 20 marks',chapters:[
+['अनुच्छेद लेखन','संकेत-बिंदुओं पर लगभग 120 शब्द।','high'],['पत्र लेखन','औपचारिक/अनौपचारिक पत्र, लगभग 100 शब्द।','high'],['स्ववृत्त / ई-मेल लेखन','निर्धारित प्रारूप और संक्षिप्त प्रस्तुति।','core'],['विज्ञापन / संदेश लेखन','लगभग 40 शब्द; स्पष्ट और प्रभावी भाषा।','core']]},
+{section:'अलग से ध्यान दें · पुराने पाठ्यक्रम में हटाए गए',chapters:[
+['इन पाठों से बोर्ड प्रश्न नहीं पूछे जाएंगे','क्षितिज: देव–सवैया/कवित्त; छाया मत छूना; कन्यादान; स्त्री-शिक्षा के विरोधी कुतर्कों का खंडन; मानवीय करुणा की दिव्य चमक. कृतिका: एही ठैयाँ झुलनी हेरानी हो रामा!; जॉर्ज पंचम की नाक.','formative']]}
+]},
+{id:'sanskrit',name:'Sanskrit — Additional Subject',short:'Sanskrit Extra',type:'Additional subject',marks:'80 theory + 20 internal',desc:'Sanskrit (122), additional subject. 2026–27 prescribed पाठ list and grammar areas.',units:[
+{section:'पठित पाठ · शेमुषी भाग 2',chapters:[
+['शुचिपर्यावरणम्','पाठ-अवबोधन, शब्दार्थ और पर्यावरण-विषयक विचार।','core'],['बुद्धिर्बलवती सदा','कथा-क्रम, प्रश्नोत्तर और नीति।','high'],['शिशुलालनम्','नाट्यांश, पात्र और भावार्थ।','core'],['जननी तुल्यवत्सला','गद्यांश, अर्थ और मातृ-स्नेह।','core'],['सुभाषितानि','श्लोक, अन्वय, भावार्थ और शब्दार्थ।','high'],['सौहार्दं प्रकृतेः शोभा','संवाद, प्रकृति और पर्यावरण।','core'],['विचित्रः साक्षी','कथा, घटना-क्रम और प्रश्न-निर्माण।','high'],['सूक्तयः','सूक्ति-अर्थ, अन्वय और भावार्थ।','core'],['अन्योक्तयः','काव्यांश, संकेत और भावार्थ।','core']]},
+{section:'अपठित एवं रचनात्मक कार्य',chapters:[
+['अपठित गद्यांश','80–100 शब्द; बोध, शीर्षक और भाषिक कार्य।','core'],['पत्र लेखन','औपचारिक अथवा अनौपचारिक पूर्ण पत्र।','high'],['चित्र-वर्णन / अनुच्छेद','मञ्जूषा की सहायता से वर्णन या अनुच्छेद।','core'],['हिंदी / अंग्रेज़ी से संस्कृत अनुवाद','दिए गए वाक्यों का पूर्ण वाक्यात्मक अनुवाद।','high']]},
+{section:'अनुप्रयुक्त व्याकरण · 25 marks',chapters:[
+['सन्धि','स्वर-सन्धि, व्यंजन-सन्धि और विसर्ग-सन्धि के निर्धारित प्रकार।','high'],['समास','तत्पुरुष, बहुव्रीहि, अव्ययीभाव और द्वन्द्व; विग्रह और समास।','high'],['प्रत्यय','कृत्, तद्धित और स्त्री-प्रत्यय के निर्धारित रूप।','high'],['वाच्य परिवर्तन','लट् लकार में कर्तृ–कर्म–क्रिया परिवर्तन।','core'],['समय लेखन','अंकों के स्थान पर शब्दों में समय।','core'],['अव्यय पद','निर्धारित अव्यय पदों का प्रयोग।','core'],['संशोधन कार्य','वाक्य-शुद्धि और व्याकरणिक संशोधन।','high']]},
+{section:'पठित अवबोधन · 30 marks',chapters:[
+['गद्यांश, पद्यांश और नाट्यांश','अति लघु, लघु उत्तर और भाषिक कार्य।','high'],['प्रश्न निर्माण','दिए गए अंश के आधार पर प्रश्न बनाना।','core'],['अन्वय / भावार्थ','पद्यांश का अन्वय अथवा भावार्थ।','high'],['घटना-क्रमानुसार वाक्य लेखन','घटनाओं को सही क्रम में लिखना।','core'],['प्रसंगानुकूल अर्थ लेखन','संदर्भ के अनुसार शब्दार्थ।','core']]}
+]}
+];
+const STORE='cbse10Tracker_2026_27_v1';let progress={};let active='math';let expanded=true;let chart=null;let timerSeconds=1500,timerHandle=null;
+try{progress=JSON.parse(localStorage.getItem(STORE)||'{}')}catch(e){progress={}}
+const $=id=>document.getElementById(id);
+function key(s,c){return s+'::'+c}
+function state(s,c){return progress[key(s,c)]||{learn:false,pyq:false,rev:false}}
+function save(){localStorage.setItem(STORE,JSON.stringify(progress));updateDashboard();showToast('Progress saved on this device')}
+function showToast(msg){$('toast').textContent=msg;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),1500)}
+function totalChapters(){return subjects.reduce((a,s)=>a+s.units.reduce((b,u)=>b+u.chapters.length,0),0)}
+function allStates(){let a=[];subjects.forEach(s=>s.units.forEach(u=>u.chapters.forEach(c=>a.push(state(s.id,c[0])))));return a}
+function updateDashboard(){let a=allStates(),learn=a.filter(x=>x.learn).length,pyq=a.filter(x=>x.pyq).length,rev=a.filter(x=>x.rev).length,done=a.filter(x=>x.learn&&x.pyq&&x.rev).length,pct=Math.round(done/(a.length||1)*100);$('overallPct').textContent=pct+'%';$('completedCount').textContent=done+' / '+a.length;$('learnedCount').textContent=learn;$('pyqCount').textContent=pyq;$('revCount').textContent=rev;$('ring').style.background=`conic-gradient(var(--accent) ${pct*3.6}deg,#293750 0deg)`;let s=subjects.find(x=>x.id===active),sa=[];s.units.forEach(u=>u.chapters.forEach(c=>sa.push(state(s.id,c[0]))));let sd=sa.filter(x=>x.learn&&x.pyq&&x.rev).length,sp=Math.round(sd/(sa.length||1)*100);$('subjectPct').textContent=sp+'% fully revised';$('subjectBar').style.width=sp+'%'}
+function renderNav(){ $('subjectNav').innerHTML=subjects.map(s=>`<button class="navtab ${s.id===active?'active':''}" data-id="${s.id}">${s.short}</button>`).join('');document.querySelectorAll('.navtab').forEach(b=>b.onclick=()=>{active=b.dataset.id;renderNav();renderSubject()})}
+function badge(type){return type==='high'?'<span class="priority p-high">★ High practice</span>':type==='core'?'<span class="priority p-core">Core</span>':type==='map'?'<span class="priority p-map">Map only</span>':type==='formative'?'<span class="priority p-formative">Project / excluded</span>':'<span class="priority p-full">Full chapter</span>'}
+function renderSubject(){let s=subjects.find(x=>x.id===active);$('subjectTitle').textContent=s.name;$('subjectEyebrow').textContent=s.type+' · '+s.marks;$('subjectDesc').textContent=s.desc;let q=$('search').value.toLowerCase(),filter=$('filter').value;let html='';s.units.forEach((u,ui)=>{let cards=u.chapters.map((c,ci)=>{let st=state(s.id,c[0]),done=st.learn&&st.pyq&&st.rev,hay=(c[0]+' '+c[1]+' '+u.section).toLowerCase();if(q&&!hay.includes(q))return '';if(filter==='pending'&&done)return '';if(filter==='done'&&!done)return '';if(filter==='high'&&c[2]!=='high')return '';let id=key(s.id,c[0]);return `<article class="chapter-card ${done?'done':''}" data-key="${id}"><div class="chapter-top"><div class="chapter-name"><div class="chapter-no">${ci+1}</div><div><h3>${c[0]}</h3><p>${c[1]}</p></div></div>${badge(c[2])}</div><div class="topicline"><b>Revision cue:</b> ${c[2]==='high'?'Solve NCERT examples + 3–5 varied PYQs; practise explaining the method.':c[2]==='map'?'Practise the prescribed map locations; theory is not board-evaluated.':c[2]==='formative'?'Check school instructions; this is not regular board-theory content.':'Read the full chapter, make concise notes and attempt a board-style question.'}</div><div class="checks"><label class="check"><input type="checkbox" data-field="learn" data-s="${s.id}" data-c="${encodeURIComponent(c[0])}" ${st.learn?'checked':''}> Learned</label><label class="check"><input type="checkbox" data-field="pyq" data-s="${s.id}" data-c="${encodeURIComponent(c[0])}" ${st.pyq?'checked':''}> PYQ practiced</label><label class="check"><input type="checkbox" data-field="rev" data-s="${s.id}" data-c="${encodeURIComponent(c[0])}" ${st.rev?'checked':''}> Revised</label></div></article>`}).join('');if(cards.trim())html+=`<div class="section-label">${u.section}</div>${cards}`});$('chapterGrid').innerHTML=html||'<div class="empty">No matching chapters. Try another search or filter.</div>';document.querySelectorAll('.checks input').forEach(el=>el.addEventListener('change',()=>{let k=key(el.dataset.s,decodeURIComponent(el.dataset.c));progress[k]=progress[k]||{learn:false,pyq:false,rev:false};progress[k][el.dataset.field]=el.checked;save();renderSubject()}));updateDashboard();if(window.lucide)lucide.createIcons();if(window.gsap)gsap.from('.chapter-card',{opacity:0,y:10,duration:.3,stagger:.025,ease:'power2.out'})}
+$('search').addEventListener('input',renderSubject);$('filter').addEventListener('change',renderSubject);$('themeBtn').onclick=()=>{document.body.classList.toggle('light');localStorage.setItem('cbseTheme',document.body.classList.contains('light')?'light':'dark')};if(localStorage.getItem('cbseTheme')==='light')document.body.classList.add('light');$('printBtn').onclick=()=>window.print();$('expandBtn').onclick=()=>{expanded=!expanded;document.querySelectorAll('.topicline').forEach(x=>x.style.display=expanded?'block':'none');$('expandBtn').querySelector('span').textContent=expanded?'Hide topics':'Show topics'};
+$('exportBtn').onclick=()=>{let blob=new Blob([JSON.stringify({version:1,session:'2026-27',progress},null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='CBSE-Class10-Progress-2026-27.json';a.click();URL.revokeObjectURL(a.href);showToast('Progress exported')};
+$('importBtn').onclick=()=>$('importFile').click();$('importFile').onchange=async e=>{let f=e.target.files[0];if(!f)return;try{let d=JSON.parse(await f.text());progress=d.progress||d;save();renderSubject();showToast('Progress imported')}catch(err){showToast('Could not read that file')}e.target.value=''};
+$('timerBtn').onclick=()=>$('timerModal').classList.add('open');$('timerClose').onclick=()=>$('timerModal').classList.remove('open');function timerPaint(){$('timerDisplay').textContent=String(Math.floor(timerSeconds/60)).padStart(2,'0')+':'+String(timerSeconds%60).padStart(2,'0')};$('timerStart').onclick=()=>{if(timerHandle){clearInterval(timerHandle);timerHandle=null;$('timerStart').textContent='Start';return}$('timerStart').textContent='Pause';timerHandle=setInterval(()=>{timerSeconds--;timerPaint();if(timerSeconds<=0){clearInterval(timerHandle);timerHandle=null;$('timerStart').textContent='Start';showToast('Focus session complete — take a short break')}} ,1000)};$('timerReset').onclick=()=>{clearInterval(timerHandle);timerHandle=null;timerSeconds=1500;timerPaint();$('timerStart').textContent='Start'};
+renderNav();renderSubject();updateDashboard();if(window.lucide)lucide.createIcons();if(window.gsap)gsap.from('.hero-main,.hero-side',{opacity:0,y:18,duration:.7,stagger:.12,ease:'power3.out'});
+
+// Progressive Web App support: install prompt + offline app-shell caching.
+let deferredInstallPrompt=null;
+const installButton=document.getElementById('installBtn');
+window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();deferredInstallPrompt=event;if(installButton)installButton.hidden=false});
+if(installButton){installButton.addEventListener('click',async()=>{if(!deferredInstallPrompt)return;deferredInstallPrompt.prompt();await deferredInstallPrompt.userChoice;deferredInstallPrompt=null;installButton.hidden=true});}
+window.addEventListener('appinstalled',()=>{if(installButton)installButton.hidden=true;showToast('StudyOS 10 installed')});
+if('serviceWorker' in navigator && location.protocol!=='file:'){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(err=>console.warn('Service worker registration failed:',err)));}
+
+</script></body></html>
